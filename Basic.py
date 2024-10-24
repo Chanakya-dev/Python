@@ -51,5 +51,5 @@ print(p)
 name=input("Enter Your Name :")
 print(name)
 
-mobileno=input("Enter Your MobileNo : ")
-print(mobileno)
+y=int(input("Enter your id :"))
+z=float(input("Enter your score :"))
