@@ -1,61 +1,37 @@
-def vikas():
-    print("Hello Vikas")
+def funct():
+    print("Hello World")
 
-def charan(name):
-    print(f"Hello {name}")
-def func(id,name,fee,course):
-    print(f"ID: {id}, Name: {name}, Fee {fee}, course: {course}")
+def funct1(a,b):
+    print(f"This is Value {a} and This is Value {b}")
 
-def func1(*num):
-    print( "This is Number ", num[2])
+def funct2(*a):
+    print(a[0])
+
+def funct3(**a):
+    print(a["lname"])
+
+def funct4(a,/):
+    print(a)
+
+def funct5(*,b):
+    print(b)
+
+def functs(a,b):
+    if a>b:
+        return a-b
+    else:
+        return a+b
+
+def functo(a):
+    p=functs(5,3)
+    a=p/a
+    print(a)
     
+funct5(b="Hello")
 
-vikas()
-charan("Charan")
-func(1,"Charan",34000,"Python")
-func1(1,2,3,4,5,6,7)
-
-
-def funckey(name):
-    print(f"Hi {name}")
-
-
-def funckey1(**keys):
-    print("name:", keys["lname"])
-
-
-funckey(name="Siva")
-funckey1(fname="Chanakya",lname="Manas")
-
-
-def function1(name,/):
-    print(f"Your name {name}")
-
-
-def function2(name):
-    print(f"Your name {name}")
-
-function2("Chanakya")
-function2(name=" Manas")   
-
-
-function1("Chanakya") 
-# function1(name=" Manas")
-
-print("Key Argument Based ------")
-def keyfunct1(*,name):
-    print(f"Hello {name}")
-
-
-print("Normal Function")
-function2("Chanakya")
-function2(name="Chanakya")
-
-keyfunct1(name="Chanakya")
-# keyfunct1("Chanakya")
-
-def combination(id,name,/,*,course):
-    print(f"ID {id} Name {name} course {course}")
-
-combination(1,"Chanakya",course="Python")
-# combination(id=1,name="Chanakya",course="Python")
+funct4("Chanakya")
+funct3(fname="Chanakya",lname="Manas")
+funct2(4,5,6)
+funct1(2,3)
+funct()
+functo(2)
