@@ -1,54 +1,76 @@
-# Conditional Statements
-a=80
-b=60
+# If Block
+x= 10
 
-if a>b:
-    b+=10
-    print(b,"B is Increased")
-if a>b:
-    b+=10
-    print(b," B is Increased Elif ")
+if x > 5:
+    print("x is greater than 5")  # Output: x is greater than 5
+
+# If Else
+x = 3
+
+if x > 5:
+    print("x is greater than 5")
 else:
-    print("Both are Equal")
+    print("x is 5 or less")  # Output: x is 5 or less
 
-print("A is Great")if a>b else print("B is Great")if b>a else print("Equal") 
+# If elif else
+x = 20
 
-for shiva in range(2,8,2):
-    print(shiva)
-name="Siva"
+if x < 10:
+    print("x is less than 10")
+elif x == 20:
+    print("x is 20")  # Output: x is 20
+else:
+    print("x is greater than 20")
 
-for x in name:
-    print(x)
+# Nested If
+x = 15
 
-for x in range(2,10):
-    if x == 5:
+if x > 10:
+    if x < 20:
+        print("x is between 10 and 20")  # Output: x is between 10 and 20
+
+# Loops
+
+# For Loop
+# Example 1: Iterate over a list
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)  # Output: apple, banana, cherry
+
+# Example 2: Use range
+for i in range(5):  # Range: 0 to 4
+    print(i)  # Output: 0 1 2 3 4
+
+
+# While Loop
+x = 5
+while x > 0:
+    print(x)  # Output: 5 4 3 2 1
+    x -= 1
+
+# break
+for i in range(5):
+    if i == 3:
+        break
+    print(i)  # Output: 0 1 2
+
+# continue
+for i in range(5):
+    if i == 3:
         continue
-    print(x)
-x=0 
-while(x in range(6)):
-    print(x)
-    x+=1
+    print(i)  # Output: 0 1 2 4
 
+# Combining Loops and Conditions
+for num in range(1, 11):  # Loop through numbers 1 to 10
+    if num % 2 == 0:
+        print(f"{num} is even")
+    else:
+        print(f"{num} is odd")
 
-for x in range(2,10):
-    print(x)
+# Nested Loops
 
-for x in range(6,1):
-    print(x)
-    x=0 
-x=6
-while(x>0):
-    print(x)
-    x-=1
-
-p=2
-q=3
-if p!=q:
-    print("Not Equal")
-    if p>q:
-        q=p
-        print(q,"If Bolck")
-    elif q>p:
-        p=q
-        print(p," Elif Block")
-    
+# Simulate a 24-hour clock with hours, minutes, and seconds
+for hour in range(0, 24):  # Outer loop for hours (0 to 23)
+    for minute in range(0, 60):  # Middle loop for minutes (0 to 59)
+        for second in range(0, 60):  # Inner loop for seconds (0 to 59)
+            print(hour, "hours", minute, "minutes", second, "seconds")

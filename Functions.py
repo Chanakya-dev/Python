@@ -1,37 +1,58 @@
-def funct():
-    print("Hello World")
+# 1. Function Without Parameters
+def say_hello():
+    print("Hello, World!")
 
-def funct1(a,b):
-    print(f"This is Value {a} and This is Value {b}")
+# Call the function
+say_hello()  # Output: Hello, World!
 
-def funct2(*a):
-    print(a[0])
 
-def funct3(**a):
-    print(a["lname"])
+# 2. Function With Parameters
+def greet(name):
+    print(f"Hello, {name}!")
 
-def funct4(a,/):
-    print(a)
+# Call the function
+greet("Alice")  # Output: Hello, Alice!
 
-def funct5(*,b):
-    print(b)
 
-def functs(a,b):
-    if a>b:
-        return a-b
-    else:
-        return a+b
+# 3. Function with Return Statement
+def add_numbers(a, b):
+    return a + b
 
-def functo(a):
-    p=functs(5,3)
-    a=p/a
-    print(a)
-    
-funct5(b="Hello")
+# Call the function and use its return value
+result = add_numbers(5, 3)
+print(result)  # Output: 8
 
-funct4("Chanakya")
-funct3(fname="Chanakya",lname="Manas")
-funct2(4,5,6)
-funct1(2,3)
-funct()
-functo(2)
+
+# 4. Multi-Keyword Arguments (Keyword Arguments Using **kwargs)
+def print_details(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+# Call the function
+print_details(name="Alice", age=25, city="New York")
+# Output:
+# name: Alice
+# age: 25
+# city: New York
+
+
+# 5. Multi Non-Keyword Arguments (Positional Arguments Using *args)
+def sum_numbers(*args):
+    return sum(args)
+
+# Call the function
+result = sum_numbers(1, 2, 3, 4, 5)
+print(result)  # Output: 15
+
+
+# 6. Combining Positional (*args) and Keyword (**kwargs) Arguments
+def describe_person(*args, **kwargs):
+    print("Positional arguments (hobbies):", args)
+    print("Keyword arguments (details):", kwargs)
+
+# Call the function
+describe_person("reading", "coding", name="Alice", age=25)
+# Output:
+# Positional arguments (hobbies): ('reading', 'coding')
+# Keyword arguments (details): {'name': 'Alice', 'age': 25}
+
